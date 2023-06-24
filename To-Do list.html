@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list</title>
+    <style>
+        body {
+            background-image: url('https://1.bp.blogspot.com/-swKkP6bVv-M/Ut_RpRJRiuI/AAAAAAAABD0/z5FRfPso6YA/s1600/ComputerDesktopWallpapersCollection760_089.jpg');
+            background-size: cover;
+        }
+
+        .todo-list {
+            background-color: cadetblue;
+            color: black;
+            font-size: 18px;
+            padding: 15px;
+            width: 30%;
+            border-radius: 15px;
+        }
+
+        .todo-item {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .todo-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .todo-actions button {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="todo-list">
+            <h1>To-Do list</h1>
+            <input style="font-size: large;" type="text" id="todo-value"> <br><br>
+            <input style="font-size: large;" type="submit" value="Add Todo" onclick="addItemsInTodo()">
+            <div>
+                <ul id="todo-items">
+                </ul>
+            </div>
+            <div>
+    </center>
+    <script>
+        function addItemsInTodo() {
+            const mainList = document.getElementById('todo-items');
+            const newTodo = document.createElement('li');
+            const taskText = document.createElement('span');
+            taskText.textContent = document.getElementById('todo-value').value;
+
+
+            const editButton = document.createElement('button');
+            editButton.innerText = 'Edit';
+            editButton.addEventListener('click', function () {
+                const newTask = prompt('Edit Task', taskText.innerText);
+                if (newTask !== null && newTask !== '') {
+                    taskText.innerText = newTask;
+                }
+            });
+
+            const deleteButton = document.createElement('button');
+            deleteButton.innerText = 'Delete';
+            deleteButton.addEventListener('click', function () {
+                newTodo.remove();
+            });
+
+            const todoActions = document.createElement('div');
+            todoActions.className = 'todo-actions';
+            todoActions.appendChild(editButton);
+            todoActions.appendChild(deleteButton);
+
+            newTodo.appendChild(taskText);
+            newTodo.appendChild(todoActions);
+
+            mainList.appendChild(newTodo);
+            document.getElementById('todo-value').value = '';
+        }
+    </script>
+</body>
+
+</html>
