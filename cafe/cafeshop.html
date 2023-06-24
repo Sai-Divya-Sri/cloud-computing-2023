@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee page</title>
+    <style>
+        body {
+            background-color: #231709;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+        }
+
+        .logo img {
+            border-radius: 50%;
+            height: 80px;
+        }
+
+        .screen {
+            display: flex;
+        }
+
+        .screen .left {
+            background-color: #231709;
+            color: goldenrod;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        
+
+        .screen .left h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .screen .left p {
+            font-size: 18px;
+            margin-top: 5px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .screen .right {
+            background-color: #80461B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px;
+        }
+
+        .screen .right img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .screen .right h1 {
+            color: black;
+            padding-top: 2px;
+            margin-top: 0;
+            padding-bottom: 20px;
+            text-align: center;
+            
+        }
+
+        .screen .screen_split {
+            width: 50%;
+            min-height: 100vh;
+        }
+
+        .coffee-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            padding-left: 20px;
+            animation: fade-in 1s ease-in-out;
+        }
+
+        .coffee-img {
+            width: 200px;
+            height: 200px;
+            margin-right: 10px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .coffee-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .coffee-info {
+            color: white;
+        }
+
+        .coffee-info h2 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .coffee-info .price {
+            font-size: 18px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .coffee-info .rating {
+            font-size: 14px;
+            color: gray;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .rating-stars {
+            color: gold;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="C:\Users\katrg\Downloads\istockphoto-872095870-1024x1024.jpg" alt="coffee logo">
+    </div>
+    <section class="screen">
+        <div class="screen_split left">
+            
+            <h1>Wake up and smell the coffee</h1>
+            <p>"Sip, sip, hurray!"</p>
+            <div class="coffee-container">
+                <div class="coffee-img">
+                    <img src="C:\Users\katrg\Downloads\Cold-Coffee-Thumbnail-300x300.jpg" alt="cold coffee">
+                </div>
+                <div class="coffee-info">
+                    <h2>Cold Coffee</h2>
+                    <div class="price">Price: $3.87</div>
+                    <div class="rating">
+                        Rating:
+                        <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="coffee-container">
+                <div class="coffee-img">
+                    <img src="C:\Users\katrg\Downloads\images (1).jpg" alt="Cappuccino">
+                </div>
+                <div class="coffee-info">
+                    <h2>Cappuccino</h2>
+                    <div class="price">Price: $4.98</div>
+                    <div class="rating">
+                        Rating:
+                        <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="screen_split right">
+            <h1><strong>"Roast & Roar: A Barrel of Laughs in the Coffee Universe"</strong></h1>
+            <img src="C:\Users\katrg\Downloads\coffee split.png" alt="coffee image">
+        </div>
+    </section>
+</body>
+
+</html>
